@@ -1,7 +1,25 @@
 .jumbotron {
-    background-image: url(../img/phare1.png);
+    background-image: url(../img/corfusize2.png);
     background-size: cover;
     margin: auto;
+}
+
+#photo {
+    width: 1024px;
+    height: 576px;
+    background-image: url(../img/Daymark-St-Martins-1024x576.jpg);
+    background-size: auto;
+    margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+    #photo {
+        width: 512px;
+        height: 288px;
+        background-image: url(../img/Daymark-St-Martins-512x288.png);
+        background-size: auto;
+        margin: auto;
+    }
 }
 
 h6 {

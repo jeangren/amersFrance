@@ -1,16 +1,4 @@
-<!doctype html>
-<html lang="en">
 
-<head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/style.css" rel="stylesheet">
-</head>
 
 <?php
 $bdd = new PDO('mysql:host=localhost;dbname=navigation;charset=utf8;port=3306', 'root', 'root');
@@ -19,7 +7,7 @@ $response = $bdd->query($request);
 $navigation = $response->fetchAll(PDO::FETCH_ASSOC);
 //  var_dump($navigation);
 
-include 'header.php';
+
 ?>
 
 
@@ -29,15 +17,20 @@ include 'header.php';
     <h2 class="display-4">AMER [amε:ʀ] : Point de repère utilisé pour la navigation maritime.</h2>
     <p class="lead">Découvrez une multitude d'amers à travers le monde</p>
     <hr class="my-4">
-    <h6>Vous pouvez ajouter des amers que vous avez découverts et photographiés lors de vos sorties en mer</h6>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Ajouter un amer</a>
+    <p class="lead">Ajoutez des amers photographiés lors de vos sorties en mer!</p>
+    <a class="btn btn-success btn-lg" href="add.php" role="button">Ajouter un amer</a>
 </div>
 
 <div class="container">
 
+
+<?php
+include 'header.php';
+?>
+
     <div class="row">
         <?php foreach ($navigation as $amer) : ?>
-            <div class="card-deck col-md-4 m-4">
+            <div class="card-deck col-md-3 m-4">
                 <div class="card">
                     <img src="img/<?= $amer['IMG_SRC'] ?>" class="card-img-top" alt="amer">
                     <div class="card-body">

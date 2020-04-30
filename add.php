@@ -1,6 +1,12 @@
 <?php include 'header.php' ?>
 
-
+<header>
+    <div id="photo">
+        <div class="container-fluid text-center">
+            <h2 class="display-4 pt-5">Partagez vos photos</h2>
+        </div>
+    </div>
+</header>
 <main role="main">
 
     <div class="album py-5 bg-light">
@@ -12,6 +18,22 @@
                     <form action="create.php" method="post" enctype="multipart/form-data">
 
                         <div class="form-group">
+                            <h5>Tout d'abord, merci de nous indiquer vos coordonnées :</h5>
+                            <label for="pseudo">Votre pseudo</label>
+                            <input name="pseudo" type="text"class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Votre email</label>
+                            <input name="email" type="mail" class="form-control"/>
+                        </div>
+                        <hr>
+
+
+
+
+                        <div class="form-group">
+                            <h5>Description du amer :</h5>
+
                             <label for="type">Type</label>
                             <select name="type" class="form-control">
                                 <option value="phare">Phare</option>
@@ -26,7 +48,7 @@
                             <input name="nom" type="text" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="region">Région maritime</label>
+                            <label for="region">Région</label>
                             <input name="region" type="text" class="form-control">
                         </div>
                         <div class="form-group">
@@ -40,7 +62,7 @@
                         <div class="form-group">
                             Envoyer une image:<br />
                             <input type="file" name="monfichier" /><br />
-                            
+
                         </div>
 
                         <input type="submit" class="btn btn-primary" value="Envoyer">
