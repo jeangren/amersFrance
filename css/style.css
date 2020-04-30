@@ -1,0 +1,9 @@
+.jumbotron {
+    background-image: url(../img/amersmajorque2.jpg);
+    background-size: cover;
+    margin: auto;
+}
+
+h6 {
+    color: aliceblue;
+}
