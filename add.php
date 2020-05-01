@@ -61,6 +61,10 @@
                             <input name="pays" type="text" class="form-control">
                         </div>
                         <div class="form-group">
+                            <label for="commentaire">Commentaire</label>
+                            <input name="commentaire" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
                             Envoyer une image:<br />
                             <input type="file" name="monfichier" /><br />
 

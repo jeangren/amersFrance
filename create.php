@@ -10,6 +10,28 @@
 
 
 <?php
+$bdd = new PDO('mysql:host=localhost;dbname=amers;charset=utf8;port=3306', 'root', 'root', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+
+$request = "INSERT INTO amers (TYPE, NOM, PAYS, REGION, VILLE, COMMENTAIRE, IMG_SRC, PSEUDO, EMAIL)
+            VALUES (:type, :nom, :pays, :region, :villeproche, :commentaire, :monfichier, pseudo, email)";
+
+$response = $bdd->prepare($request);
+
+$response->execute([
+    'TYPE'               => $_POST['type'],
+    'NAME'               => $_POST['nom'],
+    'PAYS'               => $_POST['pays'],
+    'REGION'             => $_POST['region'],
+    'VILLE'              => $_POST['villeproche'],
+    'COMMENTAIRE'        => $_POST['commentaire'],
+    'IMG_SRC'            => $_POST['monfichier'],
+    'PSEUDO'             => $_POST['pseudo'],
+    'EMAIL'              => $_POST['email'],
+]);
+
+
+
+
 // if (isset($_POST['pseudo']) AND ($_POST['email']) AND ($_POST['type']))!= "0"
 // if (isset($_GET['PSEUDO']) AND isset($_GET['EMAIL']) AND isset($_GET['TYPE'])
 
@@ -36,5 +58,8 @@ else {
     echo 'connard de '.$_POST['pseudo']. " vous n'avez pas respecté les critères d'envoi";
 }
 ?>
+
+
+
 
 <?php include 'footer.php' ?>

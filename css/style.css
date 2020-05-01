@@ -12,14 +12,12 @@
     margin: auto;
 }
 
-
-/* #create {
-    width: 1024px;
-    height: 576px;
-    background-image: url(../img/Daymark-St-Martins-1024x576.jpg);
-    background-size: auto;
+#create {
+    background-image: url(../img/panomer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     margin: auto;
-} */
+}
 
 @media screen and (max-width: 768px) {
     #photo {
