@@ -59,7 +59,22 @@ else {
 }
 ?>
 
+<div class="row">
+        
+            <div class="card-deck col-md-3 m-4">
+                <div class="card">
+                    <img src="img/<?= $_FILES['monfichier']['name']?>" class="card-img-top" alt="amer">
+                    <div class="card-body">
+                        <h5 class="card-title">Bravo vous avez créé <?= $_POST['nom'] ?></h5>
+                        <p class="card-text"><?= $POST['pays'] . " / " . $POST['region'] ?></p>
+                        <p class="card-text"><?= "by ". $POST['pseudo']?></p>
+                        <p class="card-text"><small class="text-muted"><?= $$POST['commentaire']?></small></p> -->
+                    </div>
+                </div>
+            </div>
+     
 
+    </div>
 
 
 <?php include 'footer.php' ?>
