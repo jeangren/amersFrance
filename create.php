@@ -3,7 +3,7 @@
 <header>
     <div id="create">
         <div class="container-fluid text-center">
-            <h2 class="display-4 pt-5">Merci pour votre partage</h2>
+            <h2 class="display-4 p-5">Merci pour votre partage</h2>
         </div>
     </div>
 </header>
@@ -36,3 +36,5 @@ else {
     echo 'connard de '.$_POST['pseudo']. " vous n'avez pas respecté les critères d'envoi";
 }
 ?>
+
+<?php include 'footer.php' ?>
