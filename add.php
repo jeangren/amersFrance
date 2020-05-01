@@ -22,10 +22,10 @@
                             <label for="pseudo">Votre pseudo</label>
                             <input name="pseudo" type="text"class="form-control" />
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="email">Votre email</label>
                             <input name="email" type="email" class="form-control"/>
-                        </div>
+                        </div> -->
                         <hr>
 
 
