@@ -24,7 +24,7 @@
                         </div>
                         <div class="form-group">
                             <label for="email">Votre email</label>
-                            <input name="email" type="mail" class="form-control"/>
+                            <input name="email" type="email" class="form-control"/>
                         </div>
                         <hr>
 
@@ -54,7 +54,7 @@
                         </div>
                         <div class="form-group">
                             <label for="villeproche">Ville Alentour</label>
-                            <input name="taille" type="text" class="form-control">
+                            <input name="villeproche" type="text" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="pays">Pays</label>

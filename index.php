@@ -19,12 +19,13 @@ include 'header.php';
     <p class="lead">Découvrez une multitude d'amers à travers le monde</p>
     <hr class="my-4">
     <p class="lead">Ajoutez des amers photographiés lors de vos sorties en mer!</p>
-    <a class="btn btn-success btn-lg" href="add.php" role="button">Ajouter un amer</a>
+    <a class="btn btn-danger btn-lg" href="add.php" role="button">Ajouter un amer</a>
 </div>
 
 <div class="container">
 
 
+                
 
 
     <div class="row">
@@ -34,7 +35,8 @@ include 'header.php';
                     <img src="img/<?= $amer['IMG_SRC'] ?>" class="card-img-top" alt="amer">
                     <div class="card-body">
                         <h5 class="card-title"><?= $amer['NOM'] ?></h5>
-                        <p class="card-text"><?= $amer['PAYS'] . " " . $amer['REGION'] ?></p>
+                        <p class="card-text"><?= $amer['PAYS'] . " / " . $amer['REGION'] ?></p>
+                        <p class="card-text"><?= "by ". $amer['PSEUDO']?></p>
                         <p class="card-text"><small class="text-muted"><?= $amer['COMMENTAIRE']?></small></p>
                     </div>
                 </div>

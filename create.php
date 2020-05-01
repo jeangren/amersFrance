@@ -10,10 +10,10 @@
 
 
 <?php
-$bdd = new PDO('mysql:host=localhost;dbname=amers;charset=utf8;port=3306', 'root', 'root', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+$bdd = new PDO('mysql:host=localhost;dbname=navigation;charset=utf8;port=3306', 'root', 'root', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 
-$request = "INSERT INTO amers (TYPE, NOM, PAYS, REGION, VILLE, COMMENTAIRE, IMG_SRC, PSEUDO, EMAIL)
-            VALUES (:type, :nom, :pays, :region, :villeproche, :commentaire, :monfichier, pseudo, email)";
+$request = "INSERT INTO navigation (TYPE, NOM, PAYS, REGION, VILLE, COMMENTAIRE, IMG_SRC, PSEUDO, EMAIL)
+            VALUES (:type, :nom, :pays, :region, :villeproche, :commentaire, :monfichier, :pseudo, :email)";
 
 $response = $bdd->prepare($request);
 
@@ -24,7 +24,7 @@ $response->execute([
     'REGION'             => $_POST['region'],
     'VILLE'              => $_POST['villeproche'],
     'COMMENTAIRE'        => $_POST['commentaire'],
-    'IMG_SRC'            => $_POST['monfichier'],
+    'IMG_SRC'            => $_FILES['monfichier']['name'],
     'PSEUDO'             => $_POST['pseudo'],
     'EMAIL'              => $_POST['email'],
 ]);
@@ -55,7 +55,7 @@ if (isset($_FILES['monfichier']) AND ($_FILES['monfichier']['error'] == 0))
 }
 
 else {
-    echo 'connard de '.$_POST['pseudo']. " vous n'avez pas respecté les critères d'envoi";
+    echo 'Désolé '.$_POST['pseudo']. " vous n'avez pas respecté les critères d'envoi";
 }
 ?>
 
