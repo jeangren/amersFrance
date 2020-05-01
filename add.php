@@ -40,6 +40,7 @@
                                 <option value="tour">Tour</option>
                                 <option value="architecture remarquable">Architecture Remarquable</option>
                                 <option value="relief naturel">Relief Naturel</option>
+                                <option value="autre">autre</option>
                             </select>
                         </div>
 

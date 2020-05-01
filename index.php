@@ -7,9 +7,10 @@ $response = $bdd->query($request);
 $navigation = $response->fetchAll(PDO::FETCH_ASSOC);
 //  var_dump($navigation);
 
-
 ?>
-
+<?php
+include 'header.php';
+?>
 
 
 
@@ -24,9 +25,7 @@ $navigation = $response->fetchAll(PDO::FETCH_ASSOC);
 <div class="container">
 
 
-<?php
-include 'header.php';
-?>
+
 
     <div class="row">
         <?php foreach ($navigation as $amer) : ?>
