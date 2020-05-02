@@ -24,10 +24,32 @@ $response->execute([
     'lastname'                => $_POST['lastname'],
     'pseudo'                  => $_POST['pseudo'],
     'email'                   => $_POST['email'],
-    'password'                => $_POST['$pass_hache'],
+    'password'                => $pass_hache,
    ]);
 ?>
 
+<div class="album py-5 bg-light">
+        <div class="container">
 
+            <div class="row">
+                <div class="col-md-12">
+
+                    <form action="opensession.php" method="post" enctype="multipart/form-data">
+
+                        <div class="form-group">
+                            <h5>Merci de vous connecter:</h5>
+                            <label for="pseudo">Votre pseudo</label>
+                            <input name="pseudo" type="text" class="form-control" placeholder="jeangren" />
+                            <label for="password">Votre mot de passe</label>
+                            <input name="password" type="password" class="form-control" placeholder="******">
+                            <input type="submit" class="btn btn-primary" value="Envoyer">
+                        </div>
+                    </form>
+                </div>
+               
+
+            </div>
+        </div>
+    </div>
 
 <?php include 'footer.php' ?>
