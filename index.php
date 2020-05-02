@@ -20,6 +20,9 @@ include 'header.php';
     <hr class="my-4">
     <p class="lead">Ajoutez des amers photographiés lors de vos sorties en mer!</p>
     <a class="btn btn-danger btn-lg" href="add.php" role="button">Ajouter un amer</a>
+    <a class="btn btn-success btn-lg" href="adduser.php" role="button">s'enregistrer</a>
+
+    
 </div>
 
 <div class="container">

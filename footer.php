@@ -4,7 +4,7 @@
 <footer class="text-muted">
         <div class="container">
             <p class="float-right">
-                <a href="#">Back to top</a>
+                <a href="index.php">Back home</a>
             </p>
             <p>&copy; Amer-style.fr vous souhaite bon vent!</p>
             

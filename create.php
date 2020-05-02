@@ -67,7 +67,7 @@ $response->execute([
                 <h5 class="card-title">Bravo vous avez créé <?= $_POST['nom'] ?></h5>
                 <p class="card-text"><?= $_POST['pays'] . " / " . $_POST['region'] ?></p>
                 <p class="card-text"><?= "by " . $_POST['pseudo'] ?></p>
-                <p class="card-text"><small class="text-muted"><?= $_POST['commentaire'] ?></small></p> -->
+                <p class="card-text"><small class="text-muted"><?= $_POST['commentaire'] ?></small></p>
             </div>
         </div>
     </div>
