@@ -1,7 +1,9 @@
-
+<!-- mysql:host=81.88.52.57
+;dbname=t83s126q_navigation;charset=utf8;port=3306', 't83s126q_jean', 'Jgprod19***' -->
 
 <?php
-$bdd = new PDO('mysql:host=localhost;dbname=navigation;charset=utf8;port=3306', 'root', 'root');
+$bdd = new PDO('mysql:host=localhost;dbname=navigation;charset=utf8;port=3306', 'root', 'root', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+
 $request = "SELECT * FROM navigation.amers";
 $response = $bdd->query($request);
 $navigation = $response->fetchAll(PDO::FETCH_ASSOC);
@@ -21,6 +23,7 @@ include 'header.php';
     <p class="lead">Ajoutez des amers photographiés lors de vos sorties en mer!</p>
     <a class="btn btn-danger btn-lg" href="add.php" role="button">Ajouter un amer</a>
     <a class="btn btn-success btn-lg" href="adduser.php" role="button">s'enregistrer</a>
+    <a class="btn btn-success btn-lg" href="usercreated.php" role="button">se connecter</a>
 
     
 </div>

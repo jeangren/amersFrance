@@ -14,16 +14,19 @@
 $bdd = new PDO('mysql:host=localhost;dbname=navigation;charset=utf8;port=3306', 'root', 'root', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 
 
-
-$request = "SELECT FROM navigation.users (id, pass FROM users WHERE pseudo = :pseudo)";
            
 
 
 //  Récupération de l'utilisateur et de son pass hashé
-$req = $bdd->prepare('SELECT id, password FROM users WHERE pseudo = :pseudo');
-$req->execute(array(
-'pseudo' => $pseudo));
-$resultat = $req->fetch();
+$response = $bdd->prepare('SELECT id, password FROM users WHERE pseudo = :pseudo');
+$response->execute([
+    
+    'pseudo'                  => $_POST['pseudo'],
+   
+
+    
+   ]);
+$resultat = $response->fetch();
 
 // Comparaison du pass envoyé via le formulaire avec la base
 $isPasswordCorrect = password_verify($_POST['password'], $resultat['password']);
@@ -37,7 +40,7 @@ else
     if ($isPasswordCorrect) {
         session_start();
         $_SESSION['id'] = $resultat['id'];
-        $_SESSION['pseudo'] = $pseudo;
+        $_SESSION['pseudo'] = $_POST['pseudo'];
         echo 'Vous êtes connecté !';
     }
     else {
