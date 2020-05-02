@@ -34,15 +34,12 @@ $response->execute([
             <div class="row">
                 <div class="col-md-12">
 
-                    <form action="opensession.php" method="post" enctype="multipart/form-data">
+                    <form action="usercreated.php" method="post" enctype="multipart/form-data">
 
                         <div class="form-group">
-                            <h5>Merci de vous connecter:</h5>
-                            <label for="pseudo">Votre pseudo</label>
-                            <input name="pseudo" type="text" class="form-control" placeholder="jeangren" />
-                            <label for="password">Votre mot de passe</label>
-                            <input name="password" type="password" class="form-control" placeholder="******">
-                            <input type="submit" class="btn btn-primary" value="Envoyer">
+                            <h5>Connectez vous pour accéder aux pages membres:</h5>
+                            
+                            <input type="submit" class="btn btn-primary" value="Connexion">
                         </div>
                     </form>
                 </div>
