@@ -1,4 +1,4 @@
-<!-- ok crée un amer dans la bdd -->
+<!-- à faire sous modèle du formulaire mais modifié l'existant -->
 
 
 <?php include 'header.php' ?>
@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col-md-12">
 
-                    <form action="create.php" method="post" enctype="multipart/form-data">
+                    <form action="update.php" method="post" enctype="multipart/form-data">
 
                         <div class="form-group">
                             <h5>Tout d'abord, merci de nous indiquer vos coordonnées :</h5>

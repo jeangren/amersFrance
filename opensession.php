@@ -14,7 +14,7 @@
 $bdd = new PDO('mysql:host=localhost;dbname=navigation;charset=utf8;port=3306', 'root', 'root', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 
 
-           
+//  après usercreated résultat du log, ne fonctionne pas tjs echo de Mauvais identifiant ou mot de passe          
 
 
 //  Récupération de l'utilisateur et de son pass hashé

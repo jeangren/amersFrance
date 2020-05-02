@@ -40,7 +40,7 @@ $response->execute([
 
     if (isset($_FILES['monfichier']) and ($_FILES['monfichier']['error'] == 0)) {
         // Testons si le fichier n'est pas trop gros
-        if ($_FILES['monfichier']['size'] <= 1000000) {
+        if ($_FILES['monfichier']['size'] <= 500000) {
             // Testons si l'extension est autorisée
             $infosfichier = pathinfo($_FILES['monfichier']['name']);
             $extension_upload = $infosfichier['extension'];
@@ -59,21 +59,21 @@ $response->execute([
 
 
 <div class="row">
+    
+        <div class="card-deck col-md-4 p-4 m-4 text-center">
+            <div class="card">
+                <img src="img/<?= $_FILES['monfichier']['name'] ?>" class="card-img-top" alt="amer">
+                <div class="card-body">
+                    <h5 class="card-title">Bravo vous avez créé <?= $_POST['nom'] ?></h5>
+                    <p class="card-text"><?= $_POST['pays'] . " / " . $_POST['region'] ?></p>
+                    <p class="card-text"><?= "by " . $_POST['pseudo'] ?></p>
+                    <p class="card-text"><small class="text-muted"><?= $_POST['commentaire'] ?></small></p>
+                    <p class="card-text">Pas satisfait? <a class="btn btn-danger btn-lg" href="add.php" role="button">Refaire!</a></p>
 
-    <div class="card-deck col-md-4 p-4 m-4 text-center">
-        <div class="card">
-            <img src="img/<?= $_FILES['monfichier']['name'] ?>" class="card-img-top" alt="amer">
-            <div class="card-body">
-                <h5 class="card-title">Bravo vous avez créé <?= $_POST['nom'] ?></h5>
-                <p class="card-text"><?= $_POST['pays'] . " / " . $_POST['region'] ?></p>
-                <p class="card-text"><?= "by " . $_POST['pseudo'] ?></p>
-                <p class="card-text"><small class="text-muted"><?= $_POST['commentaire'] ?></small></p>
+                </div>
             </div>
         </div>
-    </div>
-
-
+    </form>
 </div>
 
-
-<?php include 'footer.php' ?>
+    <?php include 'footer.php' ?>

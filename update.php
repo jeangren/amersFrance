@@ -1,4 +1,5 @@
-<!-- cible de adduser il créé le user dans la database avec son mp haché -->
+
+<!-- à faire va lancer les modif de edit dans la bdd -->
 
 <?php include 'header.php' ?>
 

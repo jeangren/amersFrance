@@ -1,8 +1,14 @@
+<!-- crée un user dans bdd -->
+
 <?php include 'header.php' ?>
 
 <header>
+
     <div id="photo">
+    
         <div class="container-fluid text-center">
+        
+
             <h2 class="display-4 pt-5">Enregistrer vous!</h2>
             
         </div>

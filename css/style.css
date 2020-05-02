@@ -1,7 +1,19 @@
 .jumbotron {
-    background-image: url(../img/corfusize2.png);
+    background-image: url(../img/corfuSizer.png);
     background-size: cover;
     margin: auto;
+}
+
+.navbar {
+    text-align: center;
+    opacity: 70%;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    width: max-content;
+}
+
+.btn {
+    opacity: 70%;
 }
 
 #photo {
@@ -33,5 +45,3 @@ h6 {
     color: white;
     text-align: center;
 }
-
-.btn {}

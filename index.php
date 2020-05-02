@@ -17,13 +17,16 @@ include 'header.php';
 
 
 <div class="jumbotron text-center">
+<?php include 'navbar.php'?>
+  </div>
+</nav>
     <h2 class="display-4">AMER [amε:ʀ] : Point de repère utilisé pour la navigation maritime.</h2>
     <p class="lead">Découvrez une multitude d'amers à travers le monde</p>
     <hr class="my-4">
     <p class="lead">Ajoutez des amers photographiés lors de vos sorties en mer!</p>
+    
     <a class="btn btn-danger btn-lg" href="add.php" role="button">Ajouter un amer</a>
-    <a class="btn btn-success btn-lg" href="adduser.php" role="button">s'enregistrer</a>
-    <a class="btn btn-success btn-lg" href="usercreated.php" role="button">se connecter</a>
+  
 
     
 </div>

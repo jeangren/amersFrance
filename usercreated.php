@@ -1,4 +1,9 @@
+<!-- une fois le user créé il se log pour ouvrir une session avec son mp haché -->
+
 <?php include 'header.php' ?>
+<div>
+
+</div>
 
 <header>
     <div id="create">
