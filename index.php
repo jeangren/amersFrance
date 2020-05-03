@@ -18,8 +18,7 @@ include 'header.php';
 
 <div class="jumbotron text-center">
 <?php include 'navbar.php'?>
-  </div>
-</nav>
+ 
     <h2 class="display-4">AMER [amε:ʀ] : Point de repère utilisé pour la navigation maritime.</h2>
     <p class="lead">Découvrez une multitude d'amers à travers le monde</p>
     <hr class="my-4">
@@ -47,6 +46,8 @@ include 'header.php';
                         <p class="card-text"><?= $amer['PAYS'] . " / " . $amer['REGION'] ?></p>
                         <p class="card-text"><?= "by ". $amer['PSEUDO']?></p>
                         <p class="card-text"><small class="text-muted"><?= $amer['COMMENTAIRE']?></small></p>
+                        <a class="btn btn-success btn-sm" href="update.php" role="button">Modifier</a>
+                        <a class="btn btn-danger btn-sm" href="delete.php" role="button">Supprimer</a>
                     </div>
                 </div>
             </div>

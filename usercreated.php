@@ -25,7 +25,7 @@
                         <div class="form-group">
                             <h5>Merci de vous connecter:</h5>
                             <label for="pseudo">Votre pseudo</label>
-                            <input name="pseudo" type="text" class="form-control" placeholder="jeangren" />
+                            <input name="pseudo" type="text" class="form-control" placeholder="monpseudo" />
                             <label for="password">Votre mot de passe</label>
                             <input name="password" type="password" class="form-control" placeholder="******">
                             <input type="submit" class="btn btn-primary" value="Envoyer">
