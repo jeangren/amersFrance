@@ -28,7 +28,7 @@ $amer = $response->fetch(PDO::FETCH_ASSOC);
                             <h5>Modifier vos coordonnées?</h5>
                             <label for="pseudo">Votre pseudo</label>
                             <input name="pseudo" type="text" class="form-control" value="<?= $amer['PSEUDO']?>">
-                            
+                            <input name='id' type='hidden' value="<?= $amer['ID']?>">
                         </div>
                         
                         <hr>
@@ -297,7 +297,7 @@ $amer = $response->fetch(PDO::FETCH_ASSOC);
                         </div>
                         <div class="form-group">
                             Envoyer une image (max 500Ko):<br />
-                            <input type="file" name="<?= $_FILES['monfichier']['name'] ?>" /><br />
+                            <input type="file" name="monfichier" /><br />
 
                         </div>
 

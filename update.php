@@ -4,7 +4,6 @@
 <?php include 'header.php' ?>
 
 
-
 <?php
 $bdd = new PDO('mysql:host=localhost;dbname=navigation;charset=utf8;port=3306', 'root', 'root', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 
@@ -24,7 +23,8 @@ $response->execute([
     'commentaire'           => $_POST['commentaire'],
     'file'                  => $_FILES['monfichier']['name'],
    ]);
-?>
 
+var_dump ($request);
+?>
 
 <?php include 'footer.php' ?>
