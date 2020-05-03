@@ -68,7 +68,6 @@ $response->execute([
                     <p class="card-text"><?= $_POST['pays'] . " / " . $_POST['region'] ?></p>
                     <p class="card-text"><?= "by " . $_POST['pseudo'] ?></p>
                     <p class="card-text"><small class="text-muted"><?= $_POST['commentaire'] ?></small></p>
-                    <p class="card-text">Pas satisfait? <a class="btn btn-danger btn-lg" href="add.php" role="button">!</a></p>
 
                 </div>
             </div>

@@ -40,7 +40,7 @@ include 'header.php';
         <?php foreach ($navigation as $amer) : ?>
             <div class="card-deck col-md-3 m-4">
                 <div class="card">
-                    <img src="img/<?= $amer['IMG_SRC'] ?>" class="card-img-top" alt="amer">
+                    <a href="show.php?id=<?= $amer['ID']?>"><img src="img/<?= $amer['IMG_SRC'] ?>" class="card-img-top" alt="amer"></a>
                     <div class="card-body">
                         <h5 class="card-title"><?= $amer['NOM'] ?></h5>
                         <p class="card-text"><?= $amer['PAYS'] . " / " . $amer['REGION'] ?></p>

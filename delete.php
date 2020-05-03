@@ -19,5 +19,4 @@ $response->execute([
 
  include 'footer.php' ;
 
- var_dump ($response);
  ?>
