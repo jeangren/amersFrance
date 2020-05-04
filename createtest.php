@@ -33,16 +33,25 @@ $response->execute([
 <div class="container">
     <?php    
 
-    if (isset($_FILES['monfichier']) && ($_FILES['monfichier']['error'] == 0)) {
 
+
+    if (isset($_FILES['monfichier']) && ($_FILES['monfichier']['error'] == 0)) {
         // Test si le fichier pas trop gros
         if ($_FILES['monfichier']['size'] <= 500000) {
             // Test si l'extension est autorisée
             $infosfichier = pathinfo($_FILES['monfichier']['name']);
+
             $extension_upload = $infosfichier['extension'];
+
+
+            $newFileName = $infosfichier . '-' . uniqid() . '.' .$extension_upload;
+
+    var_dump($newFileName);
+
+
             
             $extensions_autorisees = array('jpg', 'jpeg', 'gif', 'png');
-           if (in_array($extension_upload, $extensions_autorisees)) {
+            if (in_array($extension_upload, $extensions_autorisees)) {
                 // On peut valider le fichier et le stocker définitivement
                 move_uploaded_file($_FILES['monfichier']['tmp_name'], 'uploads/' . basename($_FILES['monfichier']['name']));
                 echo 'Merci ' . $_POST['pseudo'] . " l'envoi a bien été effectué !";

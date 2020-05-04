@@ -23,7 +23,6 @@ $response->execute([
     
     'pseudo'                  => $_POST['pseudo'],
    
-
     
    ]);
 $resultat = $response->fetch();

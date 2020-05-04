@@ -9,7 +9,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=navigation;charset=utf8;port=3306', 
 
 
 $request = "UPDATE navigation.users (PSEUDO, TYPE, NOM, REGION, PAYS, COMMENTAIRE, IMG_SRC,
-            SET PSEUDO = :pseudo, :type, :nom, :region, :pays, :commentaire, :file)
+            SET PSEUDO = :pseudo, :type, :nom, :region, :pays, :commentaire)
             WHERE id = :id";
 
 $response = $bdd->prepare($request);
@@ -21,7 +21,7 @@ $response->execute([
     'region'                => $_POST['region'],
     'pays'                  => $_POST['pays'],
     'commentaire'           => $_POST['commentaire'],
-    'file'                  => $_FILES['monfichier']['name'],
+    // 'file'                  => $_FILES['monfichier']['name'],
    ]);
 
 var_dump ($request);
