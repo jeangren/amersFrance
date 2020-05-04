@@ -58,7 +58,7 @@ $amer = $response->fetch(PDO::FETCH_ASSOC);
                        
                         <div class="form-group">
                             <label for="pays">Pays</label>
-                            <select name="pays" class="form-control"  value="<?= $amer['PAYS']?>"> >
+                            <select name="pays" class="form-control"  value="<?= $amer['PAYS']?>">
                                 <option value="France" selected="selected">France </option>
                                 <option value="Afghanistan">Afghanistan </option>
                                 <option value="Afrique_Centrale">Afrique_Centrale </option>
