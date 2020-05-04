@@ -8,7 +8,7 @@
 $bdd = new PDO('mysql:host=localhost;dbname=navigation;charset=utf8;port=3306', 'root', 'root', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 
 
-$request = "UPDATE navigation.users (PSEUDO, TYPE, NOM, REGION, PAYS, COMMENTAIRE, IMG_SRC,
+$request = "UPDATE navigation.users (PSEUDO, TYPE, NOM, REGION, PAYS, COMMENTAIRE, 
             SET PSEUDO = :pseudo, :type, :nom, :region, :pays, :commentaire)
             WHERE id = :id";
 
