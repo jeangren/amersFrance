@@ -32,7 +32,6 @@ include 'header.php';
 
 <div class="container">
 
-<!-- ecrire si session ok accès sinon retour home -->
 
 <p>Salut <?php echo $_SESSION['pseudo']; ?> !<br />
         Tu peux détruire les entrées suivantes:     </p>

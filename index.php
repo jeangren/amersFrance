@@ -47,7 +47,6 @@ include 'header.php';
                         <p class="card-text"><?= "by ". $amer['PSEUDO']?></p>
                         <p class="card-text"><small class="text-muted"><?= $amer['COMMENTAIRE']?></small></p>
                         <a class="btn btn-success btn-sm" href="edit.php?id=<?= $amer['ID']?>">Update</a>
-                        <a class="btn btn-danger btn-sm" href="delete.php?id=<?= $amer['ID']?>">Delete</a>
                     </div>
                 </div>
             </div>

@@ -53,11 +53,13 @@ if ($isPasswordCorrect) {
 }
 else{
     echo 'Mauvais identifiant ou mot de passe !';
+    include 'footer.php';
+    die;
 }
 
-
-
 ?>
+
+<p>Vous pouvez accéder à la suppression des amers dans la base de donnée<a class="btn btn-success btn-sm" href="delete.php">Let's go</a> <p>
 
 
 <?php include 'footer.php' ?>
