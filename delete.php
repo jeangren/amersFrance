@@ -33,9 +33,18 @@ include 'header.php';
 <div class="container">
 
 <!-- ecrire si session ok accès sinon retour home -->
+<?php
+$pseudoMaj = ucfirst($_SESSION['pseudo']);
+// var_dump($pseudoMaj)
+if (isset($pseudoMaj)){
+  echo 'Salut'. $pseudoMaj . '!' .'Tu peux détruire les entrées suivantes:';     
+}
+else{
+  die;
+}
 
-<p>Salut <?php echo $_SESSION['pseudo']; ?> !<br />
-        Tu peux détruire les entrées suivantes:     </p>
+?>
+<a class="btn btn-danger btn-sm" href="sessionkill.php>">Me déconnecter</a>
 
 
     <div class="row">
